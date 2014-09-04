@@ -19,12 +19,14 @@ vertex_list = []
 for i in range(1000):
 	vertex_list.append(g.AddVertex())
 
+print(vertex_list)
 # Create a fully connected graph 		# Adding in the edges between them
-for v in vertex_list:
+for i in range(1000):
 	while(True):
-		other = random.choice(vertex_list)
-		if(v != other):
-			g.AddGraphEdge(v,other)
+		v1 = random.choice(vertex_list)
+		v2 = random.choice(vertex_list)
+		if(v1 != v2):
+			g.AddGraphEdge(v1,v2)
 			break
 
 # Making the layout view
