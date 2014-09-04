@@ -8,13 +8,13 @@ g = vtk.vtkTree()
 verts = [g.AddVertex() for i in range(0, 10)]
  
 # Create a tree
-g.AddGraphEdge(6, 8)
-g.AddGraphEdge(0, 6)
-g.AddGraphEdge(2, 6)
-g.AddGraphEdge(1, 3)
-g.AddGraphEdge(3, 5)
-g.AddGraphEdge(5, 9)
-g.AddGraphEdge(8, 9)
+g.AddGraphEdge(verts[6], verts[8])
+g.AddGraphEdge(verts[0], verts[6])
+g.AddGraphEdge(verts[2], verts[6])
+g.AddGraphEdge(verts[1], verts[3])
+g.AddGraphEdge(verts[3], verts[5])
+g.AddGraphEdge(verts[5], verts[9])
+g.AddGraphEdge(verts[8], verts[9])
  
 graphLayoutView = vtk.vtkGraphLayoutView()
 graphLayoutView.AddRepresentationFromInput(g)
