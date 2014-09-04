@@ -14,18 +14,33 @@ import random
 
 g = vtk.vtkMutableUndirectedGraph() 	 	# Sets up empty data structure
 
-# Create a list of 1000 Vertexs
-vertex_list = []
-for i in range(1000):
-	vertex_list.append(g.AddVertex())
+# Create a start node
+init_v = g.AddVertex()
 
-# Create a fully connected graph 		# Adding in the edges between them
-for v in vertex_list:
-	while(True):
-		other = random.choice(vertex_list)
-		if(v != other):
-			g.AddGraphEdge(v,other)
-			break
+# Create this list of leaves + append inital
+leaf_list = []
+leaf_list.append(init_v)
+
+
+# Randomly Pick a Termination number
+total_nodes = random.randint(1,100)
+created_nodes = 0
+
+# While don't exede the limit + run out of leafs
+while(created_nodes < total_nodes and len(leaf_list) != 0):
+
+	# Get the current leaf, oldest
+	cur_leaf = leaf_list.pop(0)
+
+	# How many children will you have
+	num_children = random.randint(1,10)
+
+	# Create childen
+	for i in range(num_children):
+		child = g.AddVertex()
+		g.AddGraphEdge(cur_leaf, child)
+		leaf_list.append(child)
+		created_nodes+=1
 
 # Making the layout view
 # Which is an awsome class that handles a lot of the backend
