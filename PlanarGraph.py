@@ -23,7 +23,7 @@ leaf_list.append(init_v)
 
 
 # Randomly Pick a Termination number
-total_nodes = random.randint(1,100)
+total_nodes = random.randint(1,1000)
 created_nodes = 0
 
 # While don't exede the limit + run out of leafs
