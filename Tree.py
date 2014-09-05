@@ -24,7 +24,7 @@ tree.CheckedShallowCopy(g)
 graphLayoutView = vtk.vtkGraphLayoutView()
 graphLayoutView.AddRepresentationFromInput(g)
 
-treeStrategy = vtk.vtkForceDirectedLayoutStrategy()
+treeStrategy = vtk.vtkTreeLayoutStrategy()
 
 graphLayoutView.SetLayoutStrategy(treeStrategy)
 graphLayoutView.ResetCamera()
