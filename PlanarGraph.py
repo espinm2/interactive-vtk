@@ -26,6 +26,7 @@ leaf_list.append(init_v)
 total_nodes = random.randint(1,1000)
 created_nodes = 0
 
+
 # While don't exede the limit + run out of leafs
 while(created_nodes < total_nodes and len(leaf_list) != 0):
 
@@ -58,7 +59,7 @@ graphLayoutView.SetLayoutStrategy("Simple 2D")
 graphLayoutView.ResetCamera()
 
 # Opens and renders the window
-graphLayoutView.Render()
+jkjgraphLayoutView.Render()
 
 # I have no idea what the hell this does
 graphLayoutView.GetLayoutStrategy().SetRandomSeed(0)
