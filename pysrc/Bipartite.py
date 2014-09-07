@@ -31,8 +31,6 @@ for v in verts2:
 graphLayoutView = vtk.vtkGraphLayoutView()
 graphLayoutView.AddRepresentationFromInput(g)
 
-#layoutStrat = vtk.vtkClustering2DLayoutStrategy()
-
 graphLayoutView.SetLayoutStrategy("Pass Through")
 graphLayoutView.ColorVerticesOn()
 graphLayoutView.ResetCamera()
