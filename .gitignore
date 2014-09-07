@@ -1,5 +1,5 @@
-CMakeFiles/*
-CMakeCache.txt
+csrc/CMakeFiles/*
+csrc/CMakeCache.txt
 *.cmake
 *~
 *.[oa]
