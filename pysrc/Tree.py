@@ -22,7 +22,7 @@ tree = vtk.vtkTree()
 tree.CheckedShallowCopy(g)
 
 graphLayoutView = vtk.vtkGraphLayoutView()
-graphLayoutView.AddRepresentationFromInput(g)
+graphLayoutView.AddRepresentationFromInput(tree)
 
 treeStrategy = vtk.vtkTreeLayoutStrategy()
 

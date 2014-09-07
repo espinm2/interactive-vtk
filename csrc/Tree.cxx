@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
     // set up the layout and draw
     vtkSmartPointer<vtkGraphLayoutView> layout = 
         vtkSmartPointer<vtkGraphLayoutView>::New();
-    layout->AddRepresentationFromInput(tree);
+    layout->AddRepresentationFromInput(g);
     layout->SetLayoutStrategyToTree();
     layout->ResetCamera();
     layout->Render();
