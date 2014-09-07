@@ -6,18 +6,20 @@
 
 #IncludeRegexTransform: 
 
-/home/ionaic/Dropbox/visualization/hw2/interactive-vtk/Tree.cxx
+/home/ionaic/Dropbox/visualization/hw2/interactive-vtk/csrc/Tree.cxx
 vtkSmartPointer.h
 -
 vtkGraphLayoutView.h
 -
-vtkRenderWindowInteractor.h
--
 vtkMutableDirectedGraph.h
+-
+vtkRenderWindowInteractor.h
 -
 vtkTree.h
 -
 vector
+-
+iostream
 -
 
 /usr/local/include/vtk-6.0/vtkABI.h
